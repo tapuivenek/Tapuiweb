@@ -24,12 +24,10 @@ html, body {
 }
 
 .svglogo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 10%;
-    width: 10%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 @keyframes blink {
