@@ -4,13 +4,6 @@ html, body {
   background: #1AD300;
   overflow: hidden;
 }
-.svglogo {
-    width: 500px;
-    height: 500px;
-   margin: auto;
-  padding: 10px;
-    z-index: -2;
-}
 
 .pixelCon {
   position: absolute;
@@ -28,6 +21,15 @@ html, body {
   float: left;
   opacity: 0.0;
   animation: blink 5s infinite;
+}
+
+.svglogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 @keyframes blink {
