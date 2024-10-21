@@ -7,8 +7,8 @@ html, body {
 .svglogo {
     width: 500px;
     height: 500px;
-    margin-top: 800px;
-    position: absolute;
+   margin: auto;
+  padding: 10px;
     z-index: -2;
 }
 
