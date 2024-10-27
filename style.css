@@ -1,45 +1,8 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+:root {
+  --green-primary: #1da800;
+  --green-secondary: #139600;
 
-.container {
-  height: 100%; width: 100%;
-  align-items: center;
-  justify-content: space-around;
-  display: flex;
-  z-index: 1000;
-}
-
-body {
-  height: 100vh;
-  margin: 0;    padding: 0;
-  background: #1DA800;
-  overflow: hidden;
-}
-
-.pixelCon {
-  position: absolute;
-  width: 100%;  height: 100%;
-  transform: translate(0%, 0%);
-  overflow: hidden;
-}
-
-.pixel {
-  background: #139600;
-  width: 10%;
-  padding-top: 10%;
-  float: left;
-  opacity: 0.0;
-  animation: blink 5s infinite;
-}
-
-.svglogo {
-  display: block;
-  width: 25%;
-  z-index: inherit;
-  margin-left: -15%;
+  --white: #fff;
 }
 
 @font-face {
@@ -47,24 +10,60 @@ body {
   src: url(public/Minefont.ttf);
 }
 
-.ip{
-  color: white;
-  font-size:200%;
-  z-index: inherit;
-  font-family: "Minefont";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.ip2{
-  color: white;
-  font-size:200%;
-  z-index: inherit;
-  font-family: "Minefont";
-  margin-left: -10%;
+body {
+  height: 100vh;
+  background-color: var(--green-primary);
+  color: var(--white);
 }
 
-@keyframes blink {
-  0%    {opacity: 0.0;}
-  25%   {opacity: 0.0;}
-  50%   {opacity: 0.5;}
-  100%  {opacity: 0.0;}
+.container {
+  height: 100%;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  z-index: -1;
+}
+
+.pixel {
+  background-color: var(--green-secondary);
+  width: 10%;
+  padding-top: 10%;
+  float: left;
+  opacity: 0;
+}
+
+.logo {
+  width: clamp(200px, 20vw, 50%);
+}
+
+.ip {
+  font-size: clamp(1.5rem, 2vw, 3rem);
+  font-family: "Minefont";
+  text-align: center;
+  width: max(300px, 30%);
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .ip {
+    width: 80%;
+    font-size: clamp(1rem, 3vw, 5rem);
+  }
 }
